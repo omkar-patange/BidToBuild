@@ -44,6 +44,11 @@ basePriceInput.addEventListener("change", (e) => {
     setCurBid(basePrice);
 })
 
+curBidInput.addEventListener("change", (e) => {
+    curBid = parseInt(e.target.value);
+    setCurBid(curBid);
+})
+
 document.addEventListener("keypress", (e) => {
   if (
     basePriceInput !== document.activeElement &&
