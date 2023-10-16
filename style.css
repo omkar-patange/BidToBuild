@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background-image: url("./Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 45px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 72px;
+    color: white;
+    margin-top: 20px;
+}
+
+.container {
+    border-radius: 15px;
+    height: 590px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+
+    margin-top: 55px;
+}
+
+.image-cont {
+    width: 50%;
+}
+
+.image-cont h2 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form {
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #0077cc;
+    margin-bottom: 20px;
+}
+
+.form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    font-size: 45px;
+}
+
+#basePrice {
+    background-color: #7ac1f3;
+}
+
+#currentBid {
+    background-color: #7af39a;
+}
+
+button {
+    width: 50%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    font-size: 45px;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.playername {
+    width: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #f2f2f2;
+    font-size: 60px;
+    font-weight: bold;
+    color: #1234dc;
+}
