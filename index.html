@@ -7,7 +7,7 @@
     <title>BidToBuild</title>
   </head>
   <body>
-    <h1>SAIT</h1>
+    <h1>SAIT IPL</h1>
     <div class="container">
       <div class="image-cont">
         <div class="image">
@@ -16,13 +16,40 @@
       </div>
       <div class="form">
         <form>
-          <input type="number" placeholder="Base Price" id="basePrice" />
-          <input type="number" placeholder="Current Bid" id="currentBid" />
+          <div class="playername">Rohit Sharma</div>
+          <div class="align">
+          <input type="number" id="currentBid" />
+          <label>Current Bid</label>
+          </div>
+          <div class="align">
+          <input type="number" id="basePrice" />
+          <label>Base Price</label>
+          </div>
         </form>
-        <button id="save">Save</button>
+        <button id="save" onclick="psold()">Sold</button>
       </div>
     </div>
-    <div class="playername">Rohit Sharma</div>
+
+    <!-- Result container -->
+    <div class="result">
+      <div class="flexit">
+      <div class="image-cont">
+        <div class="image">
+          <img src="./Images/team0.png" alt="Team logo" id="teamLogo" />
+        </div>
+      </div>
+      <div class="form">
+        <form>
+          <div class="playername">Rohit Sharma</div>
+          <div class="align">
+          <label> Sold : Value</label>
+          </div>
+        </form>
+      </div>
+      </div>
+      <button id="next">Next Bid</button>
+    </div>
+
   </body>
   <script src="index.js"></script>
 </html>

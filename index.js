@@ -5,13 +5,25 @@ let previmg =  "";
 let basePriceInput = document.getElementById("basePrice");
 let curBidInput = document.getElementById("currentBid");
 let saveBtn = document.getElementById("save");
-
+let Cdiv = document.getElementsByClassName("container")[0];
+let Rdiv = document.getElementsByClassName("result")[0];
+let NBid = document.getElementById("next");
 const reset = () => {
   basePrice = 0;
   curBid = 0;
   basePriceInput.value = 0;
   curBidInput.value = 0;
 };
+
+const psold = () =>{
+  Cdiv.classList.add("hideC");
+  Rdiv.classList.add("showR");
+}
+
+const dBid = () =>{
+  Cdiv.classList.remove("hideC");
+  Rdiv.classList.remove("showR");
+}
 
 const setCurBid = (newbid) => {
     curBid = newbid;
@@ -37,6 +49,11 @@ saveBtn.addEventListener("click", (e) => {
   console.log("Current Bid: ", curBid);
   e.preventDefault();
   reset();
+  psold();
+});
+
+NBid.addEventListener("click", (e) =>{
+    dBid();
 });
 
 basePriceInput.addEventListener("change", (e) => {

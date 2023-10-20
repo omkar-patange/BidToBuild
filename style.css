@@ -4,35 +4,79 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
 body {
     background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-image: url("./Images/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
     padding: 45px;
+    overflow : hidden;
 }
 
 h1 {
     text-align: center;
-    font-size: 72px;
+    font-size: 4.5rem;
     color: white;
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 .container {
-    border-radius: 15px;
-    height: 590px;
+    border-radius: 0.9rem;
+    height: 32rem;
     display: flex;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 1.25rem;
     width: 90%;
     align-items: center;
     margin: auto;
-
-    margin-top: 55px;
+    margin-top: 1.5rem;
+    transition : .3s ease all;
+    z-index: 1;
+    /* border: .3rem solid rgba(0, 0, 0, .7); */
+}
+.result{
+    display: none;
+    opacity: 0;
+    z-index: -1;
+    transform: scale(.7);
+    user-select: none;
+    border-radius: 0.9rem;
+    height: 32rem;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.25rem;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    margin-top: 1.5rem;
+    transition : .3s ease all;
+    animation-delay: 3ms;
+}
+.flexit{
+    display: flex;
+    margin: 5rem 1rem;
+    user-select: none;
+}
+.hideC{
+    transform: scale(.7);
+    opacity: 0;
+    display: none;
+    user-select: none;
+    z-index: -1;
+}
+.showR{
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+    user-select: all;
+    z-index: 1;
 }
 
 .image-cont {
@@ -72,33 +116,43 @@ h1 {
 }
 
 .form input[type="number"] {
-    width: 100%;
+    color: white;
+    width: 50%;
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 5px #ccc;
     font-size: 45px;
+}
+label{
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.align{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 #basePrice {
-    background-color: #7ac1f3;
-}
+    background-color: rgba(122, 193, 243, .7);
+}   
 
 #currentBid {
-    background-color: #7af39a;
+    background-color: rgba(122, 243, 154, .7);
 }
 
 button {
-    width: 50%;
     margin: auto;
     margin-top: 15px;
-    padding: 10px;
+    padding: .4rem 1rem;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 5px #ccc;
-    font-size: 45px;
+    font-size: 2.3rem;
     background-color: #0077cc;
     color: white;
     cursor: pointer;
@@ -107,12 +161,44 @@ button {
 
 .playername {
     width: fit-content;
-    padding: 15px;
-    border-radius: 15px;
+    padding: .5rem;
+    border-radius: .5rem;
     margin: auto;
-    margin-top: 50px;
-    background-color: #f2f2f2;
-    font-size: 60px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba(18, 52, 220, .8);
+    font-size: 3rem;
     font-weight: bold;
-    color: #1234dc;
+    color: #f2f2f2;
+}   
+
+/* Changes in Result Div */
+
+.result .playername{
+    font-size : 3rem;
+}
+.result label{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    background-color:aquamarine;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+}
+#next{
+    display: block;
+}
+
+/* Result Animation */
+.result .image-cont{
+    transform-style: preserve-3d;
+}
+.result .image-cont .image{
+    animation: animate 4s linear infinite;
+    /* transform : rotateY(90deg); */
+}
+@keyframes animate{
+    0%{transform : rotateY(0deg);}
+    50%{transform : rotateY(90deg);}
+    100%{transform: rotateY(0deg);}
 }
